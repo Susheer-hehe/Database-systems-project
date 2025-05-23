@@ -1,4 +1,4 @@
-Create database Project;
+CREATE DATABASE Project;
 use Project;
 CREATE TABLE Customers (
   customer_id VARCHAR(20) PRIMARY KEY,
@@ -92,7 +92,7 @@ CREATE TABLE Rentals (
   due_date DATE,
   return_date DATE,
   rental_fee DECIMAL(10, 2),
-  is_returned BOOLEAN,
+  is_returned Bit,
   FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
   FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
@@ -111,7 +111,7 @@ CREATE TABLE Sales (
   sale_date DATE,
   quantity_sold INT,
   unit_price DECIMAL(10, 2),
-  discount_applied BOOLEAN,
+  discount_applied BIT,
   total_sale_amount DECIMAL(10, 2),
   FOREIGN KEY (product_id) REFERENCES Products(product_id),
   FOREIGN KEY (store_id) REFERENCES Stores(store_id)
