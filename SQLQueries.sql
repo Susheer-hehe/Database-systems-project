@@ -1,3 +1,6 @@
+
+--Retrieval Queries
+
 -- View all customers
 SELECT * FROM Customers;
 
