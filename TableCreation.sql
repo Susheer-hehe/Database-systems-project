@@ -49,6 +49,7 @@ CREATE TABLE Games (
   genre VARCHAR(50),
   publisher VARCHAR(100),
   release_date DATE,
+  name VARCHAR(100),
   FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
 CREATE TABLE Orders (
